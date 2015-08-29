@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Os7-RB-OOi">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Record-->
@@ -93,17 +94,50 @@
             </objects>
             <point key="canvasLocation" x="970" y="407"/>
         </scene>
-        <!--View Controller-->
+        <!--Play Sounds View Controller-->
         <scene sceneID="eJ4-Ge-hN2">
             <objects>
-                <viewController id="fTW-xl-A0r" sceneMemberID="viewController">
+                <viewController id="fTW-xl-A0r" customClass="PlaySoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iCA-rr-rym"/>
                         <viewControllerLayoutGuide type="bottom" id="CDP-m5-mQ2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MCU-S3-Rb6">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgE-aM-da9">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="snail">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="PlaySnailed:" destination="fTW-xl-A0r" eventType="touchUpInside" id="JJj-bD-q6s"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qgE-aM-da9" firstAttribute="top" secondItem="iCA-rr-rym" secondAttribute="bottom" constant="50" id="iUL-8E-vyJ"/>
+                            <constraint firstItem="qgE-aM-da9" firstAttribute="leading" secondItem="MCU-S3-Rb6" secondAttribute="leadingMargin" constant="30" id="lx3-PQ-gTU"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="qgE-aM-da9"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="iUL-8E-vyJ"/>
+                                <exclude reference="lx3-PQ-gTU"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="qgE-aM-da9"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="iUL-8E-vyJ"/>
+                                <include reference="lx3-PQ-gTU"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0wB-VQ-Fvo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -131,6 +165,7 @@
     </scenes>
     <resources>
         <image name="microphone" width="100" height="100"/>
+        <image name="snail" width="100" height="100"/>
         <image name="stop" width="50" height="50"/>
     </resources>
 </document>
