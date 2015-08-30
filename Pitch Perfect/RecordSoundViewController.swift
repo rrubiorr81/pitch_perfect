@@ -9,9 +9,10 @@
 import UIKit
 import AVFoundation
 
-class RecordSoundViewController: UIViewController {
+class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
     
-    var audioRecorder:AVAudioRecorder!
+    var audioRecorder: AVAudioRecorder!
+    var recordedAudio: RecordedAudio!
 
     @IBOutlet weak var recordingInProgress: UILabel!
     
@@ -48,7 +49,9 @@ class RecordSoundViewController: UIViewController {
         var session = AVAudioSession.sharedInstance()
         session.setCategory(AVAudioSessionCategoryPlayAndRecord, error: nil)
         
+        
         audioRecorder = AVAudioRecorder(URL: filePath, settings: nil, error: nil)
+        audioRecorder.delegate = self;
         audioRecorder.meteringEnabled = true
         audioRecorder.record()
         
@@ -60,6 +63,25 @@ class RecordSoundViewController: UIViewController {
         stopButton.hidden = false;
         //TODO: record user's voice
         println("grabando voz");
+    }
+    
+    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool) {
+        
+        if(flag)
+        {
+            recordedAudio = RecordedAudio();
+            recordedAudio.filePathUrl = recorder.url
+            recordedAudio.title = recorder.url.lastPathComponent
+        
+            //move to the segue view...
+        
+            self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
+        } else{
+            println("recording was not sucessfull")
+            stopButton.hidden = true;
+            playButton.enabled = true;
+            
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
