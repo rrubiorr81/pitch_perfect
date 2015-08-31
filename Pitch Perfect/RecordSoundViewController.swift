@@ -29,6 +29,17 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if(segue.identifier == "stopRecording"){
+            //playSoundsVC is apparently a pointer to the PlaySoundsViewController view.
+            let playSoundsVC:PlaySoundsViewController = segue.destinationViewController as! PlaySoundsViewController
+            
+            let data = sender as! RecordedAudio
+            playSoundsVC.receivedAudio = data
+        }
+    }
 
     @IBAction func recordAudio(sender: UIButton) {
 

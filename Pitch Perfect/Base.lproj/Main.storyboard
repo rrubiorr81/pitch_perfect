@@ -114,15 +114,6 @@
                                     <action selector="PlaySnailed:" destination="fTW-xl-A0r" eventType="touchUpInside" id="JJj-bD-q6s"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6Z-ka-qoI">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="rabbit">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="PlayRabbit:" destination="fTW-xl-A0r" eventType="touchUpInside" id="bpr-g1-rAa"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6t-Ya-eRu">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="stop">
@@ -130,6 +121,15 @@
                                 </state>
                                 <connections>
                                     <action selector="stopPlay:" destination="fTW-xl-A0r" eventType="touchUpInside" id="YeZ-w8-mz3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6Z-ka-qoI">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="rabbit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="PlayRabbit:" destination="fTW-xl-A0r" eventType="touchUpInside" id="bpr-g1-rAa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -145,8 +145,8 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="qgE-aM-da9"/>
-                                <exclude reference="t6Z-ka-qoI"/>
                                 <exclude reference="p6t-Ya-eRu"/>
+                                <exclude reference="t6Z-ka-qoI"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="iUL-8E-vyJ"/>
@@ -160,8 +160,8 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="qgE-aM-da9"/>
-                                <include reference="t6Z-ka-qoI"/>
                                 <include reference="p6t-Ya-eRu"/>
+                                <include reference="t6Z-ka-qoI"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="iUL-8E-vyJ"/>
