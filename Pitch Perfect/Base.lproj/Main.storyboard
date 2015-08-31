@@ -114,15 +114,6 @@
                                     <action selector="PlaySnailed:" destination="fTW-xl-A0r" eventType="touchUpInside" id="JJj-bD-q6s"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6t-Ya-eRu">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="stop">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="stopPlay:" destination="fTW-xl-A0r" eventType="touchUpInside" id="YeZ-w8-mz3"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6Z-ka-qoI">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="rabbit">
@@ -132,12 +123,32 @@
                                     <action selector="PlayRabbit:" destination="fTW-xl-A0r" eventType="touchUpInside" id="bpr-g1-rAa"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6t-Ya-eRu">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopPlay:" destination="fTW-xl-A0r" eventType="touchUpInside" id="YeZ-w8-mz3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pw-rL-ju5">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="chipmunk">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="PlayChipmunk:" destination="fTW-xl-A0r" eventType="touchUpInside" id="7GS-su-ftc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="CDP-m5-mQ2" firstAttribute="top" secondItem="p6t-Ya-eRu" secondAttribute="bottom" constant="40" id="3P9-cL-mg2"/>
+                            <constraint firstItem="2pw-rL-ju5" firstAttribute="top" secondItem="qgE-aM-da9" secondAttribute="bottom" constant="50" id="3WH-m2-CGn"/>
                             <constraint firstAttribute="centerX" secondItem="p6t-Ya-eRu" secondAttribute="centerX" id="Ka2-Vy-gQj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="t6Z-ka-qoI" secondAttribute="trailing" constant="30" id="Vlh-OU-2oc"/>
+                            <constraint firstItem="2pw-rL-ju5" firstAttribute="leading" secondItem="MCU-S3-Rb6" secondAttribute="leadingMargin" constant="30" id="WAc-PR-gzt"/>
                             <constraint firstItem="qgE-aM-da9" firstAttribute="top" secondItem="iCA-rr-rym" secondAttribute="bottom" constant="50" id="iUL-8E-vyJ"/>
                             <constraint firstItem="qgE-aM-da9" firstAttribute="leading" secondItem="MCU-S3-Rb6" secondAttribute="leadingMargin" constant="30" id="lx3-PQ-gTU"/>
                             <constraint firstItem="t6Z-ka-qoI" firstAttribute="top" secondItem="iCA-rr-rym" secondAttribute="bottom" constant="50" id="yzf-ow-jbh"/>
@@ -145,12 +156,15 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="qgE-aM-da9"/>
-                                <exclude reference="p6t-Ya-eRu"/>
                                 <exclude reference="t6Z-ka-qoI"/>
+                                <exclude reference="p6t-Ya-eRu"/>
+                                <exclude reference="2pw-rL-ju5"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="iUL-8E-vyJ"/>
                                 <exclude reference="lx3-PQ-gTU"/>
+                                <exclude reference="3WH-m2-CGn"/>
+                                <exclude reference="WAc-PR-gzt"/>
                                 <exclude reference="Vlh-OU-2oc"/>
                                 <exclude reference="yzf-ow-jbh"/>
                                 <exclude reference="Ka2-Vy-gQj"/>
@@ -160,12 +174,15 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="qgE-aM-da9"/>
-                                <include reference="p6t-Ya-eRu"/>
                                 <include reference="t6Z-ka-qoI"/>
+                                <include reference="p6t-Ya-eRu"/>
+                                <include reference="2pw-rL-ju5"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="iUL-8E-vyJ"/>
                                 <include reference="lx3-PQ-gTU"/>
+                                <include reference="3WH-m2-CGn"/>
+                                <include reference="WAc-PR-gzt"/>
                                 <include reference="Vlh-OU-2oc"/>
                                 <include reference="yzf-ow-jbh"/>
                                 <include reference="Ka2-Vy-gQj"/>
@@ -198,6 +215,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chipmunk" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="rabbit" width="100" height="100"/>
         <image name="snail" width="100" height="100"/>

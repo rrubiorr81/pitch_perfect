@@ -32,6 +32,10 @@ class PlaySoundsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func PlayChipmunk(sender: AnyObject) {
+        
+    }
+    
     @IBAction func PlaySnailed(sender: AnyObject) {
         self.playAtRate(0.5);
     }
