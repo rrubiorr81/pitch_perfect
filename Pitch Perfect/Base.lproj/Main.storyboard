@@ -156,12 +156,12 @@
                             <constraint firstItem="CDP-m5-mQ2" firstAttribute="top" secondItem="p6t-Ya-eRu" secondAttribute="bottom" constant="40" id="3P9-cL-mg2"/>
                             <constraint firstItem="2pw-rL-ju5" firstAttribute="top" secondItem="qgE-aM-da9" secondAttribute="bottom" constant="50" id="3WH-m2-CGn"/>
                             <constraint firstAttribute="centerX" secondItem="p6t-Ya-eRu" secondAttribute="centerX" id="Ka2-Vy-gQj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="t6Z-ka-qoI" secondAttribute="trailing" constant="30" id="Vlh-OU-2oc"/>
-                            <constraint firstItem="2pw-rL-ju5" firstAttribute="leading" secondItem="MCU-S3-Rb6" secondAttribute="leadingMargin" constant="30" id="WAc-PR-gzt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="t6Z-ka-qoI" secondAttribute="trailing" constant="40" id="Vlh-OU-2oc"/>
+                            <constraint firstItem="2pw-rL-ju5" firstAttribute="leading" secondItem="MCU-S3-Rb6" secondAttribute="leadingMargin" constant="40" id="WAc-PR-gzt"/>
                             <constraint firstItem="V0C-av-VRP" firstAttribute="top" secondItem="t6Z-ka-qoI" secondAttribute="bottom" constant="50" id="XYe-rI-dtI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="V0C-av-VRP" secondAttribute="trailing" constant="30" id="b8C-wl-oNr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="V0C-av-VRP" secondAttribute="trailing" constant="40" id="b8C-wl-oNr"/>
                             <constraint firstItem="qgE-aM-da9" firstAttribute="top" secondItem="iCA-rr-rym" secondAttribute="bottom" constant="50" id="iUL-8E-vyJ"/>
-                            <constraint firstItem="qgE-aM-da9" firstAttribute="leading" secondItem="MCU-S3-Rb6" secondAttribute="leadingMargin" constant="30" id="lx3-PQ-gTU"/>
+                            <constraint firstItem="qgE-aM-da9" firstAttribute="leading" secondItem="MCU-S3-Rb6" secondAttribute="leadingMargin" constant="40" id="lx3-PQ-gTU"/>
                             <constraint firstItem="t6Z-ka-qoI" firstAttribute="top" secondItem="iCA-rr-rym" secondAttribute="bottom" constant="50" id="yzf-ow-jbh"/>
                         </constraints>
                         <variation key="default">
