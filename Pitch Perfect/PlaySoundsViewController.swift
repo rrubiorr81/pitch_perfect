@@ -55,6 +55,8 @@ class PlaySoundsViewController: UIViewController {
 
     @IBAction func stopPlay(sender: AnyObject) {
         audioPlayer.stop();
+        audioEngine.stop()
+        audioEngine.reset()
     }
     
     func playAtRate(numberRate: Float) {

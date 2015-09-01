@@ -11,6 +11,8 @@ import AVFoundation
 
 class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
     
+    let TAPTORECORD = "Tap to Record"
+    let RECORDING = "recording"
     var audioRecorder: AVAudioRecorder!
     var recordedAudio: RecordedAudio!
 
@@ -70,7 +72,8 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
         
         
         playButton.enabled = false;
-        recordingInProgress.hidden = false;
+//        recordingInProgress.hidden = false;
+        recordingInProgress.text = RECORDING
         stopButton.hidden = false;
         //TODO: record user's voice
         println("grabando voz");
@@ -98,11 +101,12 @@ class RecordSoundViewController: UIViewController, AVAudioRecorderDelegate {
     override func viewWillAppear(animated: Bool) {
         //hide stop button
         stopButton.hidden = true;
+        recordingInProgress.text = TAPTORECORD
     }
 
     
     @IBAction func stopAudio(sender: UIButton) {
-        recordingInProgress.hidden = true;
+        recordingInProgress.text = TAPTORECORD	
         playButton.enabled = true;
         
         audioRecorder.stop()
